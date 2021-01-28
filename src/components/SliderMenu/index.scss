@@ -1,0 +1,17 @@
+div.SliderMenu { 
+    /* background-color: yellowgreen; */
+
+    padding-top: 11vh;
+
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .buttons { 
+        background-color: yellowgreen;
+        width: 10rem;
+        padding: 0 30%;
+    } 
+} 

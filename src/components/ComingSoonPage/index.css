@@ -20,7 +20,17 @@ div.ComingSoonPage {
   text-align: center;
 }
 
-div.ComingSoonPage div {
+div.ComingSoonPage div.text {
   margin: 1rem 0;
+}
+
+div.ComingSoonPage div.text span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+div.ComingSoonPage div.text h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 /*# sourceMappingURL=index.css.map */

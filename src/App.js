@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 
 // components 
-import Header from './components/Header'
-import MapView from './components/MapView'
-import Navbar from './components/Navbar'
-import Charts from './components/Charts'
-import Account from './components/Account'
-import ComingSoonPage from './components/ComingSoonPage'
+import Header from './components/Header' 
+import MapView from './components/MapView' 
+import Navbar from './components/Navbar' 
+import ComingSoonPage from './components/ComingSoonPage' 
+import Charts from './components/Charts' 
+import Account from './components/Account' 
+import SliderMenu from './components/SliderMenu' 
 
 function App() { 
 
@@ -26,7 +27,7 @@ function App() {
 
           <Switch>  
           <Route exact path="/charts">
-              {/* <Charts setCurrentNav={setCurrentNav}/>  */}
+              {/* <Charts setCurrentNav={setCurrentNav}/>  */} 
               <ComingSoonPage setCurrentNav={setCurrentNav}/> 
             </Route> 
 
@@ -39,7 +40,8 @@ function App() {
               <ComingSoonPage setCurrentNav={setCurrentNav}/> 
             </Route> 
 
-            <Route path="/">
+            <Route path="/"> 
+              <SliderMenu/> 
               <MapView setCurrentNav={setCurrentNav}/> 
             </Route> 
           </Switch> 
@@ -47,7 +49,7 @@ function App() {
         <Navbar currentNav={currentNav} setCurrentNav={setCurrentNav}/> 
 
       </div> 
-    </Router>
+    </Router> 
   ); 
 } 
 

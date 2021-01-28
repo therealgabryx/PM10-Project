@@ -12,13 +12,15 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "framer": "^1.2.12",
-    "mapbox-gl": "^2.0.1",
+    "mapbox-gl": "^1.13.0",
     "mdb-ui-kit": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-mapbox-gl": "^4.8.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "rewire": "^5.0.0",
+    "shards-react": "^1.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

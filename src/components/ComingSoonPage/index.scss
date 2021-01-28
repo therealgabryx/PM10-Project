@@ -9,7 +9,18 @@ div.ComingSoonPage {
     justify-content: center;
     text-align: center;
 
-    div { 
-        margin: 1rem 0;
+    div.text { 
+        margin: 1rem 0; 
+
+        span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal;  
+        }
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; 
+        }
+  
     } 
-}
+} 

@@ -5,9 +5,11 @@ body {
     // font-size: 62.5%;
 
     position: relative; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     height: 100vh;
 
     overflow-x: hidden;
     overflow-y: hidden;
+
+    
 } 
