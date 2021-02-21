@@ -9,7 +9,7 @@ import { GlobalContext } from '../lib/globalContext'
 
 export default function navbar() { 
 
-    let { navState: currentNav, setNavstate: setCurrentNav } = useContext(GlobalContext) 
+    let { navState: currentNav, setNavState: setCurrentNav } = useContext(GlobalContext) 
 
     return (
         <div className={styles.container}> 
