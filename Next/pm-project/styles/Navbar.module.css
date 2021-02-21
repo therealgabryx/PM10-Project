@@ -31,10 +31,10 @@
     font-size: 1.15rem; 
 } 
 
-.container .navbarIconActive {
+.container div.navbarIconActive {
     color: #202020;
 } 
 
-.container .navbarIconHover {
+.container div.navbarIconHover {
     font-size: 120%;
-}
+} 
