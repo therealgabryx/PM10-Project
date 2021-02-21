@@ -50,11 +50,11 @@ export function useGlobalContext() {
       break;
   }
 
-  let [navState, setNavstate] = useState(initState)
+  let [navState, setNavState] = useState(initState)
 
   let globalContext = {
     navState,
-    setNavstate
+    setNavState
   }
   
   return globalContext
