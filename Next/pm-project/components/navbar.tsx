@@ -12,7 +12,7 @@ export default function navbar() {
     let { navState: currentNav, setNavState: setCurrentNav } = useContext(GlobalContext) 
 
     return (
-        <div className={styles.container}> 
+        <div className={styles.container}>  
             <Link href={{ pathname: '/charts' }}> 
                 <div onClick={() => { setCurrentNav('charts') }} className={currentNav === 'charts' ? styles.navbarIconActive : '' }> 
                     <FontAwesomeIcon icon={faChartPie}/> 
