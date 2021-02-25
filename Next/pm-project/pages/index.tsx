@@ -44,7 +44,11 @@ function MapboxMap({ pageIsMounted, setPageIsMounted }) {
     
     setPageIsMounted(true); 
 
+<<<<<<< HEAD
     mapboxgl.accessToken = process.env.mapboxAccessToken;
+=======
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGhlcmVhbGdhYnJ5eCIsImEiOiJja2p6bDM0eGgwOHFtMndsaXg3ZXdjbDAwIn0.JG_P2ErrrShMZelU_HQ_vg';
+>>>>>>> main
 
     var map = new mapboxgl.Map({
       container: 'my-map',

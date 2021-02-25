@@ -234,4 +234,20 @@ input[type="file"] {
 
 .hidden {
   display: none;
+} 
+
+/* Flex shorthands */
+
+.flex-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
