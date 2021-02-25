@@ -8,10 +8,14 @@ export default function account() {
 
     return (
         <div className='main'>
-            <h1>Account</h1>
+            { user ? <h1>Account</h1> : <h1>Login</h1> }
             { user ? <SignOutButton /> : <SignInButton />}
         </div>
     )
+}
+
+function SignInForm() {
+
 }
 
 // Sign in with Google Button 
@@ -21,7 +25,7 @@ function SignInButton() {
     }
 
     return (
-        <button className="btn-google" onClick={signInWithGoogle}>
+        <button className="btn-google flex-x" onClick={signInWithGoogle}>
             <img src={'/google.png'} alt="Sign in with Google" />
         Sign in with Google
         </button>
@@ -33,6 +37,6 @@ function SignOutButton() {
     return (
         <button onClick={() => auth.signOut()}>
             SignOut
-        </button>
+        </button> 
     )
 }
