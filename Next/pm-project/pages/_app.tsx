@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../styles/globals.css'
+import '../styles/globals.scss'
 
 import { UserContext } from '../lib/authContext' 
 import { GlobalContext } from '../lib/globalContext'

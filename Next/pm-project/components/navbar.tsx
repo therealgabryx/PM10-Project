@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
 
-import styles from '../styles/Navbar.module.css'
+import styles from '../styles/Navbar.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faChartPie, faUser, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons' 

@@ -4,7 +4,7 @@ const loader = () => {
     return (
         <div>
             loading... 
-        </div>
+        </div> 
     ); 
 } 
 

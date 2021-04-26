@@ -16,7 +16,9 @@
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-firebase-hooks": "^2.2.0"
+    "react-firebase-hooks": "^2.2.0",
+    "react-spinners": "^0.10.6",
+    "sass": "^1.32.11"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
