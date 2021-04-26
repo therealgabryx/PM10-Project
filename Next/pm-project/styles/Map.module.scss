@@ -1,0 +1,17 @@
+.Map { 
+    max-height: 100vh;
+    overflow-y: hidden;
+
+    .data_selectors { 
+        display: flex;
+        position: absolute; 
+        /* top: 40%;
+        right: 0;
+        background-color: white;
+        border-radius: 24px;
+        padding: 1rem;
+        width: 80%;
+        margin: 0 10%;
+        transform: rotate(-90deg);   */
+    } 
+} 

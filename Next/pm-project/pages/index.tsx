@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
+import MapStyles from '../styles/Map.module.scss'
 
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -57,13 +58,13 @@ function MapboxMap({ pageIsMounted, setPageIsMounted }) {
   }, []);
 
   return ( 
-    <>
-    <div className="data-selectors">
-      <div>H%</div> 
-      <div>PM10</div> 
-      <div>°C</div> 
-    </div>
-    <div id="my-map" style={{ height: '100vh' }} /> 
-    </>
+    <div className={MapStyles.Map}> 
+      <div className={MapStyles.data_selectors}>
+        <div>H%</div> 
+        <div>PM10</div> 
+        <div>°C</div> 
+      </div>
+      <div id="my-map" style={{ height: '100vh' }} /> 
+    </div> 
   ) 
 } 
