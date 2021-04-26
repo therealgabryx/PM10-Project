@@ -1,0 +1,35 @@
+.profile_head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 2rem 0 2rem 0;
+
+    .profileImage {
+        min-width: 75px;
+        min-height: 75px;
+        max-width: 75px;
+        max-height: 75px;
+
+        border-radius: 50%;
+        background-color: gray;
+        margin: 0 1rem 0 0;
+    
+        img.profile {
+            border-radius: 50%;
+        }
+    } 
+
+    .fullname {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: auto; 
+        // background-color: rosybrown;
+    }
+} 
+
+.profile_info {
+    margin: 2rem 0;
+}

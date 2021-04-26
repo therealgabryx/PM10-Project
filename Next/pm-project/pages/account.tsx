@@ -2,17 +2,22 @@ import React, { useContext } from 'react'
 import { UserContext } from '../lib/authContext'; 
 import { auth, googleAuthProvider, firestore } from '../lib/firebase'
 
-import AccountStyles from '../styles/Account.module.css'
+import AccountStyles from '../styles/Account.module.scss'
 
 export default function account() {
 
-    // const { user } = useContext(UserContext);
-    const user = true;
+    const { user } = useContext(UserContext);
+    // const user = true;
 
     return (
         <div className='main'>
             { user ? <h1>Account</h1> : <h1>Login</h1> }
-            { user ? <AccountInfo /> : <SignInForm />}
+            { user ? <AccountInfo 
+                        img={user.providerData[0].photoURL} 
+                        displayName={user.providerData[0].displayName}
+                        email={user.providerData[0].email}
+                    /> 
+            : <SignInForm /> }
         </div>
     )
 }
@@ -21,19 +26,30 @@ function SignInForm() {
     return(
         <div> 
             <SignInButton />
-        </div>
+        </div> 
     )
 }
 
-function AccountInfo() {
+function AccountInfo({ img, displayName, email }) {
+
+    const fullname = displayName.split(' ')
+
     return(
         <div> 
-            <div className={AccountStyles.profileImage}></div> 
-            <div>
-                <p>Welcome back, <b>Gabryx</b>!</p> 
-            </div>
-            <SignOutButton />
-        </div>
+            <div className={AccountStyles.profile_head}>
+                <div className={AccountStyles.profileImage} >
+                    <img src={img} className={AccountStyles.profile} /> 
+                </div>  
+                <div className={AccountStyles.fullname}> 
+                    <span>{ fullname[0] }</span>
+                    <span>{ fullname[1] }</span>
+                </div> 
+            </div> 
+            <div className={AccountStyles.profile_info}> 
+            { email } 
+            </div> 
+            <SignOutButton /> 
+        </div> 
     )
 }
 
