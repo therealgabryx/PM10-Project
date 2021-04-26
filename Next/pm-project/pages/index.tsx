@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -44,13 +44,9 @@ function MapboxMap({ pageIsMounted, setPageIsMounted }) {
     
     setPageIsMounted(true); 
 
-<<<<<<< HEAD
-    mapboxgl.accessToken = process.env.mapboxAccessToken;
-=======
     mapboxgl.accessToken = 'pk.eyJ1IjoidGhlcmVhbGdhYnJ5eCIsImEiOiJja2p6bDM0eGgwOHFtMndsaXg3ZXdjbDAwIn0.JG_P2ErrrShMZelU_HQ_vg';
->>>>>>> main
 
-    var map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: 'my-map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [lng, lat], 
@@ -60,8 +56,14 @@ function MapboxMap({ pageIsMounted, setPageIsMounted }) {
 
   }, []);
 
-  return (
-    <div id="my-map" style={{ height: '100vh' }}> 
+  return ( 
+    <>
+    <div className="data-selectors">
+      <div>H%</div> 
+      <div>PM10</div> 
+      <div>°C</div> 
     </div>
-  )
-}
+    <div id="my-map" style={{ height: '100vh' }} /> 
+    </>
+  ) 
+} 
