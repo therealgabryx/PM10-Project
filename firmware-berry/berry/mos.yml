@@ -1,7 +1,6 @@
-author: mongoose-os
-description: A Mongoose OS app skeleton
-version: 1.0
-
+author: lghx
+description: PM10-Project - berry sensor
+version: 0.9
 libs_version: ${mos.version}
 modules_version: ${mos.version}
 mongoose_os_version: ${mos.version}
@@ -19,11 +18,14 @@ filesystem:
 # Uncomment and modify according to your needs:
 
 config_schema:
- - ["mqtt.server", "iot.eclipse.org:1883"]
- - ["i2c.enable", true]
- - ["gps.uart_no", 2]
- - ["gps.baud_rate", 9600]
- - ["gps.update_interval", 2000]
+  - ["sntp", "o", {title: "SNTP settings"}]
+  - ["sntp.enable", "b", true, {title: "Enable SNTP"}]
+  - ["sntp.server", "s", "it.pool.ntp.org", {title: "0.it.pool.ntp.org"}]
+  - ["mqtt.server", "iot.eclipse.org:1883"]
+  - ["i2c.enable", true]
+  - ["gps.uart_no", 2]
+  - ["gps.baud_rate", 9600]
+  - ["gps.update_interval", 2000]
 
 # These settings get compiled into the C structure, and can be accessed
 # from the C code this way:
@@ -34,13 +36,6 @@ config_schema:
 #
 # To see all available compiled settings, buid the firmware and open
 # build/gen/mgos_config.h file.
-#
-# Also, in this config_schema section, you can override existing
-# settings that has been created by other libraries. For example, debug log
-# level is 2 by default. For this firmware we can override it to 3:
-#
-# config_schema:
-#  - ["debug.level", 3]
 
 libs:
   - origin: https://github.com/mongoose-os-libs/boards
@@ -49,9 +44,11 @@ libs:
   - origin: https://github.com/mongoose-os-libs/rpc-service-fs
   - origin: https://github.com/mongoose-os-libs/rpc-uart
   - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/mjs
   - origin: https://github.com/mongoose-os-libs/adc
   - origin: https://github.com/mongoose-os-libs/dht
   - origin: https://github.com/mongoose-os-libs/mqtt
+  - origin: https://github.com/mongoose-os-libs/gcp
   - origin: https://github.com/alvarowolfx/gps
 
 conds:
