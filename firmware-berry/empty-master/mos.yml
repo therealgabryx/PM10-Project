@@ -8,11 +8,7 @@ mongoose_os_version: ${mos.version}
 
 # Optional. List of tags for online search.
 tags:
-  - c
-
-# List of files / directories with C sources. No slashes at the end of dir names.
-sources:
-  - src
+  - js
 
 # List of dirs. Files from these dirs will be copied to the device filesystem
 filesystem:
@@ -22,11 +18,12 @@ filesystem:
 # Below is a custom firmware configuration example.
 # Uncomment and modify according to your needs:
 
-# config_schema:
-#  - ["my_app", "o", {title: "My app custom settings"}]
-#  - ["my_app.bool_value", "b", false, {title: "Some boolean value"}]
-#  - ["my_app.string_value", "s", "", {title: "Some string value"}]
-#  - ["my_app.int_value", "i", 123, {title: "Some integer value"}]
+config_schema:
+ - ["mqtt.server", "iot.eclipse.org:1883"]
+ - ["i2c.enable", true]
+ - ["gps.uart_no", 2]
+ - ["gps.baud_rate", 9600]
+ - ["gps.update_interval", 2000]
 
 # These settings get compiled into the C structure, and can be accessed
 # from the C code this way:
@@ -51,6 +48,21 @@ libs:
   - origin: https://github.com/mongoose-os-libs/rpc-service-config
   - origin: https://github.com/mongoose-os-libs/rpc-service-fs
   - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/adc
+  - origin: https://github.com/mongoose-os-libs/dht
+  - origin: https://github.com/mongoose-os-libs/mqtt
+  - origin: https://github.com/alvarowolfx/gps
+
+conds:
+  # It's not that we can't work with multicore
+  # but we cannot afford it because of space (32K).
+  - when: mos.platform == "esp32"
+    apply:
+      build_vars:
+        ESP_IDF_SDKCONFIG_OPTS: >
+          ${build_vars.ESP_IDF_SDKCONFIG_OPTS}
+          CONFIG_FREERTOS_UNICORE=y
 
 # Used by the mos tool to catch mos binaries incompatible with this file format
 manifest_version: 2017-09-29
