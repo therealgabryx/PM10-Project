@@ -2,5 +2,5 @@
   "arch": "esp32",
   "platform": "esp32",
   "app_name": "berry",
-  "build_time_ms": 57715
+  "build_time_ms": 56251
 }

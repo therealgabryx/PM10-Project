@@ -40,9 +40,9 @@ Timer.set(10000, true, function () { // Timer period is in ms (now 10 secs)
 
   // Format all data into JSON message and publish it on GCP
   let msg = JSON.stringify([{ timestamp: Timer.fmt("%c", Timer.now()), gps: GPS.getLocation(), temperature: dht.getTemp(), humidity: dht.getHumidity(), Pm10: dustVal }]);
-  //let ok = MQTT.pub(topic, msg, 1);
-  //print(ok, msg);
-  print(msg);
+  let ok = MQTT.pub(topic, msg, 1);
+  print(ok, msg);
+  //print(msg);
 
   GPIO.toggle(ledPin);                // Turn on status led
 }, null);

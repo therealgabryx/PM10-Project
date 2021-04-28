@@ -1,4 +1,4 @@
-# PM10-Project - berry sensor (beta - 0.9)
+# PM10-Project - berry sensor (beta - 0.5)
 
 Sensor that monitors dust and other common air parameter in Trento, Italy
 
